@@ -1,18 +1,23 @@
 console.log("JavaScript array Solar system exercise by Phonethip");
 
-const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"]
+const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"];
+
+const planetEl = document.getElementById("planets");
 
 /*
     Use the forEach method to add the name of each planet
     to a section element in your HTML with an id of "planets".
     Use string templates to construct the DOM elements.
 */
-const planetEl = document.getElementById("planets");
-     planetEl.innerHTML = "<h1>The eight planets in our solar system</h1>";
-    for (let i = 0; i < planets.length; i++){
-        planetEl.innerHTML += `<p>${planets[i]}</p>`; 
-}
-console.log(planetEl);
+
+planets.forEach( (printPlanets) => {
+    
+    planetEl.innerHTML = "<h1>The eight planets in our solar system</h1>";
+    planetEl.innerHTML += `<p>${planets}</p>`; 
+    // console.log(printPlanets);
+    return printPlanets;
+});
+
 
 /*
     Use the map method to create a new array where the 
@@ -22,9 +27,15 @@ console.log(planetEl);
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 */
 
-const capPlanets = planetEl.map(function(planets){
-    
-})
+let capPlanets = planets.map( (caps)=> {
+    return caps;
+});
+
+capPlanets = caps.charAt(0).toUpperCase(array);
+
+console.log(capPlanets);
+// capPlanets.charAt(0).toUpperCase();
+
 
 
 /*
