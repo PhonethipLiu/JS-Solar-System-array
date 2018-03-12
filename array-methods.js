@@ -11,9 +11,8 @@ const planetEl = document.getElementById("planets");
 */
 
 planets.forEach( (printPlanets) => {
-    
     planetEl.innerHTML = "<h1>The eight planets in our solar system</h1>";
-    planetEl.innerHTML += `<p>${planets}</p>`; 
+    planetEl.innerHTML += `<p> ${planets.join(" , ")} </p>`; 
     // console.log(printPlanets);
     return printPlanets;
 });
@@ -26,17 +25,15 @@ planets.forEach( (printPlanets) => {
 
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 */
+const print = document.getElementById("planets-caps");
+print.innerHTML = "<h3> Planets using map method to create a new array where the first letter of each planet is capitalized:</h3>";
 
-let capPlanets = planets.map( (caps)=> {
-    return caps;
+planets.map( (caps)=> {
+    let capPlanets = caps.charAt(0).toUpperCase() + caps.slice(1);
+    print.innerHTML += `<p> ${capPlanets} </p>`;
+    console.log(capPlanets);
+    return capPlanets;
 });
-
-capPlanets = caps.charAt(0).toUpperCase(array);
-
-console.log(capPlanets);
-// capPlanets.charAt(0).toUpperCase();
-
-
 
 /*
     Use the filter method to create a new array that
