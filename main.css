@@ -23,13 +23,11 @@ p {
     font-size: 1rem;
     line-height: 1.5rem;
     display: inline-block;
-    /* padding-right: 2rem; */
+    padding-right: 2rem;
     /* text-align: end;
     align-items: flex-start; */
     text-shadow: 5px 2px 18px black;
 }
-
-
 
 img {
     width: 100%;
