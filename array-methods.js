@@ -51,3 +51,13 @@ newPlanetsArray = eplanets.innerHTML += `<p> ${newPlanetsArray.join(" , ")} </p>
 
 // Use the reduce method to create a sentence from the words in the following array
 const words = ["The", "early", "bird", "might", "get", "the", "worm", "but", "the", "second", "mouse", "gets", "the", "cheese"]
+
+var sentence = words.reduce( (prev, curr) => {
+    return prev + " " + curr;
+});
+
+console.log("sentence", sentence);
+
+var line = document.getElementById("sentence-reduce");
+    line.innerHTML ="<h3> Used the reduce method to create a sentence from an array of words:</h3>";
+    sentence = line.innerHTML += `<p> ${sentence}.</p>`;
